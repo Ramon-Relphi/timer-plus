@@ -1,25 +1,27 @@
 #include "timerplus.inc"
 
-DefTimer:PrintTest() {
+// Define Timer Callback
+DefTimer:ShowHello() {
 
-    printf("Test");
+    // Print: "Hello, World!"
+    printf("Hello, World!");
+    
+    // Delete Timer
+    DeleteTimer("ShowHello");
     return 1;
 }
 
 public OnGameModeInit() {
 
-    Timer_Set("PrintTest", 1000, true);
+    // Start Timer
+    StartTimer("ShowHello", 1000, true);
     return 1;
 }
 
 public OnGameModeExit() {
-
-    Timer_Kill("PrintTest");
     return 1;
 }
 
 main() {
-
-    printf("Timer Plus -> Test Script : Started!");
     return 0;
 }

@@ -1,10 +1,15 @@
 [![samp-include](https://img.shields.io/badge/sa--mp-library-2f2f2f.svg?style=for-the-badge)](https://github.com/Ramon-Relphi/timer-plus)
 
+
+---
+
 <br>
 
 1. [Installation](#-Installation)
 
 2. [Documentation](#-Documentation)
+
+---
 
 <br>
 
@@ -28,50 +33,47 @@ Then, include the "timerplus.inc" include file in your code:
 #include "timerplus.inc"
 ```
 
+---
+
+<br>
+
 ## ☕ Documentation
 
-## **Functions**
-
-- ...
-
-## **Callbacks**
-
-- ...
 
 ### **Example**
 
 
 ```pawn
-
 #include "timerplus.inc"
 
-DefTimer:PrintTest() {
+// Define Timer Callback
+DefTimer:ShowHello() {
 
-    printf("Test");
+    // Print: "Hello, World!"
+    printf("Hello, World!");
+    
+    // Delete Timer
+    DeleteTimer("ShowHello");
     return 1;
 }
 
 public OnGameModeInit() {
 
-    Timer_Set("PrintTest", 1000, true);
+    // Start Timer
+    StartTimer("ShowHello", 1000, true);
     return 1;
 }
 
 public OnGameModeExit() {
-
-    Timer_Kill("PrintTest");
     return 1;
 }
 
 main() {
-
-    printf("Timer Plus -> Test Script : Started!");
     return 0;
 }
-
 ```
 
-<br><br>
+---
 
 This project is licensed. See the [LICENSE](LICENSE.md) file for more details.
 
