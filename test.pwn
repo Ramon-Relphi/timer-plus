@@ -14,7 +14,7 @@ DefTimer:ShowHello() {
 public OnGameModeInit() {
 
     // Start Timer
-    StartTimer("ShowHello", 1000, true);
+    StartTimer("ShowHello", 1000, false);
     return 1;
 }
 
