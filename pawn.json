@@ -1,0 +1,13 @@
+{
+	"user": "Ramon-Relphi",
+	"repo": "timer-plus",
+	"tag": "1.2.0",
+	"entry": "test.pwn",
+	"output": "test.amx",
+	"dependencies": [
+		"pawn-lang/samp-stdlib"
+	],
+	"runtime": {
+		"mode": "y_testing"
+	}
+}
